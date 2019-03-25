@@ -1,2 +1,2 @@
-rootProject.name = "presentation-template"
+rootProject.name = "webinar-dep-mgmt-part-1"
 

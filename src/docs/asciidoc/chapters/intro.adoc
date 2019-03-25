@@ -1,0 +1,63 @@
+[background-color="#01303a"]
+== Why dependency management?
+
+=== Source vs published
+
+* Sources
+** (mostly) reliable
+** (often) slow
+** never touched
+** hard to version
+** safe
+
+=== Source vs published (2)
+
+* Binaries
+** Stable
+** Fast (pre-built)
+** Requires trusted sources
+** Not always metadata
+
+=== Consuming binaries
+
+* A `lib` directory
+* From a Maven repository
+** Maven Central (OSS libraries)
+** Private repositories (closed source, proxies)
+* From an Ivy repository
+** Artifactory, ...
+* From a custom repository
+** JitPack, ...
+
+=== Lib directory
+
+* Straightforward
+* No dependency management at all
+* Binaries in SCM
+
+=== Maven/Ivy repository
+
+* GAV coordinates
+* transitive dependencies management
+* metadata format restricts what you can do
+
+=== Custom repositories
+
+* Not portable
+* Hard to consume transitively
+
+=== Maven != Maven Central
+
+* Maven: a build tool
+* Maven **repository**: a place where you can find binaries
+
+=== Source dependencies
+
+[source,groovy]
+----
+sourceControl {
+    gitRepository("https://github.com/gradle/native-samples-cpp-library.git") {
+        producesModule("org.gradle.cpp-samples:utilities")
+    }
+}
+----

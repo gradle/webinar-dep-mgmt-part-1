@@ -1,3 +1,4 @@
+[background-color="#01303a"]
 == What is Gradle?
 
 === Gradle's purpose
@@ -28,18 +29,6 @@ Gradle is a build and automation tool.
 * dot release every ~6 weeks
 * major release every ~year
 
-=== Gradle Inc.
-
-The company behind Gradle.
-
-[%step]
-* Build Happiness
-* Employs full time engineers
-* 30+ Gradle Engineers (~half on Gradle OSS)
-* Providing Gradle Build Scans and Gradle Enterprise
-* (Gradle consulting, support, development services etc.)
-* (Training: online, public and in-house)
-
 === Gradle Enterprise
 
 [%step]
@@ -54,21 +43,3 @@ The company behind Gradle.
 === Gradle Enterprise
 
 image::gradle-enterprise.png[width=80%, height=80%]
-
-=== Free Build Scans on SaaS
-
-* link:https://scans.gradle.com/[scans.gradle.com]
-* Already used by many OSS projects
-* `gradle --scan`
-
-=== Gradle is hiring!
-
-* Fully distributed development team
-* Exciting project used by millions
-* Build tool team and Gradle enterprise positions
-
-If anything you hear from now on sounds like a great problem to solve,
-
-Talk to us!
-
-* https://gradle.com/careers/

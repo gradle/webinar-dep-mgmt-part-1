@@ -10,14 +10,15 @@ ifndef::sourcedir[:sourcedir: ../java]
 :title-slide-transition-speed: fast
 :icons: font
 
-= : Switching to Gradle
+= : Dependency Management with Gradle
 
 +++<h2>+++
-Maturity, performance and pleasure!
+Part 1 - Fundamentals
 +++</h2>+++
 
 Cédric Champeau (@CedricChampeau) & Louis Jacomet (@ljacomet) - Gradle Inc.
 
+[background-color="#01303a"]
 == Who are we?
 
 [%notitle]
@@ -27,7 +28,6 @@ Cédric Champeau (@CedricChampeau) & Louis Jacomet (@ljacomet) - Gradle Inc.
 speaker {
     name 'Cédric Champeau'
     company 'Gradle Inc'
-    oss 'Apache Groovy committer',
     successes 'Static type checker',
               'Static compilation',
               'Traits',
@@ -36,6 +36,7 @@ speaker {
         failures Stream.of(bugs),
         twitter '@CedricChampeau',
         github 'melix',
+        hobbies 'amateur astronomer',
         extraDescription '''Groovy in Action 2 co-author
 Misc OSS contribs'''
 }
@@ -60,32 +61,10 @@ how to stay out of management?!?'''
 
 include::chapters/about-gradle.adoc[]
 
-== A screencast
+include::chapters/intro.adoc[]
 
-screencast:step1[]
+include::chapters/core-concepts.adoc[]
 
-== Another screencast
+include::chapters/controlling-dependency-versions.adoc[]
 
-screencast:step2[]
-
-== Conclusion
-
-=== Gradle Enterprise
-
-* On premise build cache and build scan solution
-* Out of the box solution for distributed build cache
-* Improved build scan feature set
-** Searchable build history
-** Build comparison
-
-=== Sessions at Devoxx BE
-
-* https://dvbe18.confinabox.com/talk/DBF-1594/project_versioning_like_a_git[Project versioning like a git]
-** Matthieu Brouillard
-** Wednesday, 13:30 - 13:45 Room 5
-
-* https://dvbe18.confinabox.com/talk/VFH-6802/Improving_Android_Build_Performance[Improving Android Build performance]
-** Cédric Champeau
-**  Thursday, 16:30 - 17:15 Room 3
-
-
+include::chapters/wrapup.adoc[]

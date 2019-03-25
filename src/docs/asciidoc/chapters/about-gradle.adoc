@@ -22,10 +22,11 @@ Gradle is a build and automation tool.
 === Gradle in figures
 
 [%step]
-* 7.0M downloads / month
-* https://techcrunch.com/2017/04/07/tracking-the-explosive-growth-of-open-source-software/[#17 OSS projects worldwide]
-* 35+ Gradle Engineers
+* 9.0M downloads / month
+* 3K+ plugins
 * 300K builds/week @LinkedIn
+* dot release every ~6 weeks
+* major release every ~year
 
 === Gradle Inc.
 
@@ -34,9 +35,31 @@ The company behind Gradle.
 [%step]
 * Build Happiness
 * Employs full time engineers
+* 30+ Gradle Engineers (~half on Gradle OSS)
 * Providing Gradle Build Scans and Gradle Enterprise
 * (Gradle consulting, support, development services etc.)
 * (Training: online, public and in-house)
+
+=== Gradle Enterprise
+
+[%step]
+* Commercial product - Developer Productivity
+* *Build Scans*
+** persistent shareable record
+** of what happened during a build
+* *Build Cache*
+** reuse of build outputs
+* On premise install, distributed cache, build history, dashboards, export API etc...
+
+=== Gradle Enterprise
+
+image::gradle-enterprise.png[width=80%, height=80%]
+
+=== Free Build Scans on SaaS
+
+* link:https://scans.gradle.com/[scans.gradle.com]
+* Already used by many OSS projects
+* `gradle --scan`
 
 === Gradle is hiring!
 
@@ -49,4 +72,3 @@ If anything you hear from now on sounds like a great problem to solve,
 Talk to us!
 
 * https://gradle.com/careers/
-* or meet us at the booth!

@@ -28,6 +28,9 @@ include::chapters/about-gradle.adoc[]
 
 include::chapters/intro.adoc[]
 
+[background-color="#01303a"]
+== Demo
+
 include::chapters/core-concepts.adoc[]
 
 include::chapters/controlling-dependency-versions.adoc[]

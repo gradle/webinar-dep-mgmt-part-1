@@ -1,6 +1,6 @@
 plugins {
-   `java`
-   `application`
+   java
+   application
 }
 
 repositories {

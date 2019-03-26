@@ -52,7 +52,7 @@ image::rich-versions-2.png[height=459]
 
 * Look at https://docs.gradle.org/current/userguide/declaring_dependencies.html#sub:declaring_dependency_rich_version[Full reference]
 
-=== Dynamic versions
+=== Special versions
 
 * Snapshots
 * Ranges (`[1.0, [`, `[1.1, 1.4]`, ...)
@@ -72,12 +72,13 @@ image::rich-versions-2.png[height=459]
 
 === Control over dynamic versions
 
-* `--refresh-dependencies`: has impact **only on dynamic modules**
+* `--refresh-dependencies`: has impact **only on dynamic/changing modules**
 * Absolutely no relationship with Maven local repository or Gradle artifact cache
 
 === Dependency locking
 
-* If you use dynamic versions (`[1.0, [`, `1.+`, `latest.release`, ...)
+If you use dynamic versions (`[1.0, [`, `1.+`, `latest.release`, ...):
+
 * Builds become _non reproducible_
 * Solution: dependency locking
 
@@ -119,7 +120,7 @@ dependencyLocking {
 * A _dependency constraint_ tells something about modules found in the graph
 * Doesn't matter _how deep_ in the graph they are
 * Can be used to upgrade transitives
-* Affects resolution result **iff** module seen in graph
+* Affects resolution result **if and only if** module seen in graph
 
 [source,groovy]
 ----

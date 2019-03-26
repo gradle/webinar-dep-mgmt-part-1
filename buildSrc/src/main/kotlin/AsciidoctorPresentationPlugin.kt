@@ -130,7 +130,7 @@ class AsciidoctorPresentationPlugin : Plugin<Project> {
                         "width" to extension.width.get(),
                         "height" to extension.heigth.get(),
                         "project-version" to "1.0",
-                        "revealjs_transition" to "linear",
+                        "revealjs_transition" to "fade",
                         "revealjs_history" to "true",
                         "revealjs_slideNumber" to "true",
                         "revealjs_theme" to extension.theme.get(),

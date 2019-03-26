@@ -18,46 +18,11 @@ Part 1 - Fundamentals
 
 Cédric Champeau (@CedricChampeau) & Louis Jacomet (@ljacomet) - Gradle Inc.
 
-[background-color="#01303a"]
 == Who are we?
 
-[%notitle]
-=== Cedric
-[source,groovy]
-----
-speaker {
-    name 'Cédric Champeau'
-    company 'Gradle Inc'
-    successes 'Static type checker',
-              'Static compilation',
-              'Traits',
-              'Markup template engine',
-              'DSLs'
-        failures Stream.of(bugs),
-        twitter '@CedricChampeau',
-        github 'melix',
-        hobbies 'amateur astronomer',
-        extraDescription '''Groovy in Action 2 co-author
-Misc OSS contribs'''
-}
-----
+image::who-s-who.png[height=250,width=520]
 
-[%notitle]
-=== Louis
-[source,groovy]
-----
-speaker {
-    name 'Louis Jacomet'
-    company 'Gradle Inc'
-    past 'Terracotta / Ehcache',
-              'Freelance consultant',
-        failures Stream.of(bugs),
-        twitter '@ljacomet',
-        github 'ljacomet',
-        extraDescription '''Not fully figured out
-how to stay out of management?!?'''
-}
-----
+Dependency management team
 
 include::chapters/about-gradle.adoc[]
 

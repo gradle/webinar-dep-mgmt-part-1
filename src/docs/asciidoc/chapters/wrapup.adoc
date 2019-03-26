@@ -18,5 +18,5 @@
 * Capabilities
 * Resolution rules
 
-[%background-color="#01303a"]
+[background-color="#01303a"]
 == Questions?

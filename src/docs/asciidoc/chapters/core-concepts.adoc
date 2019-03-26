@@ -1,14 +1,52 @@
 [background-color="#01303a"]
 == Core concepts
 
+=== Definitions
+
+[%step]
+* *Module*
+** A piece of software that evolves over time
+** Has a group, name and version to identify it
+** Example: `org.slf4j:slf4j-api:1.7.2`
+* *Configuration* +
+In the context of dependency management, and for most users:
+** Named set of dependencies
+** Provides access to resolved modules and their artifacts
+** Example: `implementation`
+
+=== API and implementation
+
+image::configurations/bucket.png[width=100%, height=100%]
+
+=== More bucket configurations
+
+image::configurations/bucket_2.png[width=100%, height=100%]
+
+=== Bucket configurations relationship
+
+image::configurations/bucket_3.png[width=100%, height=100%]
+
 === API vs implementation
 
-* To _build_ a library, you need:
-** API+implementation dependencies
-* To _compile_ against a library, you need:
-** API dependencies
-* To _run_, you need:
-** API+implementation+runtime only dependencies
+* To _build_ a module, you need:
+** `api`, `implementation` and `compileOnly` dependencies
+* To _run_ a module, you need:
+** `api`, `implementation` and `runtimeOnly` dependencies
+
+=== Classpath configurations
+
+image::configurations/classpath.png[width=100%, heighth=100%]
+
+=== API vs implementation transitively
+
+* To _build against_ a module, you need:
+** transitive `api` dependencies
+* To _run against_ a module, you need:
+** transitive `api`, `implementation` and `runtimeOnly` dependencies
+
+=== Exported configurations
+
+image::configurations/complete.png[width=100%, heighth=100%]
 
 === Configurations
 
@@ -19,9 +57,10 @@
 
 === Buckets of dependencies
 
-* A list of dependencies
-* `canBeConsumed=false`
-* `canBeResolved=false`
+[%step]
+* A named list of dependencies
+* `canBeConsumed=false` +
+  `canBeResolved=false`
 
 === Resolvable configurations
 

@@ -4,17 +4,12 @@ plugins {
 }
 
 repositories {
-   jcenter()
+   mavenCentral()
 }
 
 dependencies {
    implementation(project(":gitutils"))
-   implementation("info.picocli:picocli") {
-      version {
-         require("[3.9, 4[")
-         prefer("3.9.5")
-      }
-   } 
+   implementation("info.picocli:picocli:3.9.5")
 }
 
 application {

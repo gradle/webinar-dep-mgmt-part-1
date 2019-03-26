@@ -31,6 +31,14 @@ include::chapters/intro.adoc[]
 [background-color="#01303a"]
 == Demo
 
+=== Repositories
+
+[%step]
+* Order of repositories _is important_
+* Avoid _mavenLocal()_ at all costs
+** Not strictly a repository, but a cache for Maven
+
+
 include::chapters/core-concepts.adoc[]
 
 include::chapters/controlling-dependency-versions.adoc[]

@@ -86,6 +86,7 @@ image::configurations/complete.png[width=100%, heighth=100%]
 [%step]
 * Gradle needs a way to perform the matching between consumers and producers
 * Attributes and attribute matching are the answer
+* Variants are the unit, identified by their attributes
 
 === Compilation against project(1)
 
@@ -127,9 +128,11 @@ image::consumer/runtime3.png[width=100%, heighth=100%]
 
 image::consumer/external.png[width=100%, heighth=100%]
 
-=== Repositories
+=== Semantics and dependencies
 
-[%step]
-* Out of the box support for Maven, Ivy and file repositories
-* Order of repositories _is important_
-* Avoid _mavenLocal()_ at all costs
+Gradle has a strong model of dependencies:
+
+* Semantic difference between compilation and runtime
+* Semantic difference between building a library and building _against_ a library
+* Ability for a module to produce more than one variant
+** More on this in the followup webinars

@@ -1,6 +1,25 @@
 [background-color="#01303a"]
 == Why dependency management?
 
+=== A long time ago ...
+
+[source,bash]
+----
+> javac -d out *.java
+> cd out/
+> jar cf ../../lib/project1.jar *.class
+> cd ../../project2
+> javac -cp ../lib/project1.jar -d out *.class
+----
+
+=== Then came tools
+
+* Helped you build and package
+* Did not handle dependencies
+** Download jars from project website
+** Lived in a `lib` directory or equivalent
+** Often saved next to code in source control
+
 === Source vs published
 
 * Sources
@@ -18,46 +37,30 @@
 ** Requires trusted sources
 ** Not always metadata
 
-=== Consuming binaries
+=== Growing ecosystem
 
-* A `lib` directory
-* From a Maven repository
-** Maven Central (OSS libraries)
-** Private repositories (closed source, proxies)
-* From an Ivy repository
-** Artifactory, ...
-* From a custom repository
-** JitPack, ...
+With the growing popularity of Java and the growth of its ecosystem,
+managing all dependencies of a project turns into a dependency chase.
 
-=== Lib directory
+=== Thus dependency management ...
 
-* Straightforward
-* No dependency management at all
-* Binaries in SCM
-
-=== Maven/Ivy repository
-
-* GAV coordinates
-* transitive dependencies management
-* metadata format restricts what you can do
-
-=== Custom repositories
-
-* Not portable
-* Hard to consume transitively
+* Ivy or Maven would take care of your dependencies
+** Libraries have known coordinates
+** Published to repositories, with metadata in addition of the binary
+** Automated the transitive aspect of dependency management
 
 === Maven != Maven Central
 
+[%step]
 * Maven: a build tool
-* Maven **repository**: a place where you can find binaries
+* Maven *POM*: a metadata format
+* Maven **repositories**: Places where you can find binaries, with Maven metadata
 
-=== Source dependencies
+=== And Gradle joins the party
 
-[source,groovy]
-----
-sourceControl {
-    gitRepository("https://github.com/gradle/native-samples-cpp-library.git") {
-        producesModule("org.gradle.cpp-samples:utilities")
-    }
-}
-----
+* Compatible with all of the previous options
+[%step]
+** `lib` or custom repositories
+** Ivy metadata
+** Maven metadata
+** and more ...

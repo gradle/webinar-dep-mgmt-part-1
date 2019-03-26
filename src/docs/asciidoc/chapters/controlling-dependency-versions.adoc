@@ -1,2 +1,106 @@
 [background-color="#01303a"]
 == Controlling dependency versions
+
+=== Rich version constraints
+
+=== Meaning of versions
+
+* What does it mean to say: "I depend on 1.1"
+* Does it mean it doesn't work using 1.0?
+* Implicit statement: "I should work with 1.1+"
+* What if it's not true?
+
+=== Meaning of versions
+
+* Use `latest.release`?
+* Dependency on `1.2-beta-3`: is `beta` important?
+* Dependency on snapshots...
+
+=== Enter rich version constraints
+
+[source,groovy]
+----
+dependencies {
+   implementation(project(":gitutils"))
+   implementation("info.picocli:picocli") {
+       version {
+          strictly("[3.9, 4.0[")
+          prefer("3.9.5")
+       }
+       because("Provides command-line argument parsing")
+   }
+}
+----
+
+=== Version constraints
+
+* Legacy notation (without `version` block) translates to `require`
+* `require`: doesn't accept any lower version, upgrades are acceptable
+* `strictly`: if any other version in the graph disagrees, fails
+* `prefer`: weak constraint, if nobody else cares, choose this version
+
+=== How to choose?
+
+image::rich-versions-1.png[height=562]
+
+=== How to choose?
+
+
+image::rich-versions-2.png[height=459]
+
+=== How to choose?
+
+* Look at https://docs.gradle.org/current/userguide/declaring_dependencies.html#sub:declaring_dependency_rich_version[Full reference]
+
+=== Dynamic versions
+
+* Snapshots
+* Ranges (`[1.0, [`, `[1.1, 1.4]`, ...)
+* Head selectors (`latest.release`, `latest.integration`)
+* Cached to avoid too many repository lookups
+
+=== Control over dynamic versions
+
+[source,groovy]
+----
+    configurations.all {
+        resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+    }
+----
+
+* Warning: significant impact on performance!
+
+=== Control over dynamic versions
+
+* `--refresh-dependencies`: has impact **only on dynamic modules**
+* Absolutely no relationship with Maven local repository or Gradle artifact cache
+
+=== Dependency locking
+
+* If you use dynamic versions (`[1.0, [`, `1.+`, `latest.release`, ...)
+* Builds become _non reproducible_
+* Solution: dependency locking
+
+=== Dependency locking
+
+* Lock a single configuration
+
+[source,kotlin]
+----
+configurations {
+   compileClasspath {
+      resolutionStrategy.activateDependencyLocking()
+   }
+}
+----
+
+=== Dependency locking
+
+* Convenience for locking _all_ configurations
+
+[source,kotlin]
+----
+dependencyLocking {
+    lockAllConfigurations()
+}
+----

@@ -39,4 +39,9 @@
 * `canBeConsumed=true`
 * `canBeResolved=false`
 
+=== Repositories
+
+* Out of the box support for Maven, Ivy and file repositories
+* Order of repositories _is important_
+* Avoid _mavenLocal()_ at all costs
 

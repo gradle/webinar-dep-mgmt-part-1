@@ -51,7 +51,6 @@ managing all dependencies of a project turns into a dependency chase.
 
 === Maven != Maven Central
 
-[%step]
 * Maven: a build tool
 * Maven *POM*: a metadata format
 * Maven **repositories**: Places where you can find binaries, with Maven metadata
@@ -59,7 +58,6 @@ managing all dependencies of a project turns into a dependency chase.
 === And Gradle joins the party
 
 * Compatible with all of the previous options
-[%step]
 ** `lib` or custom repositories
 ** Ivy metadata
 ** Maven metadata

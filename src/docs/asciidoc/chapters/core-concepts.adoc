@@ -3,7 +3,7 @@
 
 === Definitions
 
-[%step]
+
 * *Module*
 ** A piece of software that evolves over time
 ** Has a group, name and version to identify it
@@ -51,21 +51,21 @@ image::configurations/complete.png[width=100%, heighth=100%]
 === Configurations
 
 * 3 kinds of configurations
-[%step]
+
 ** "buckets" of dependencies
 ** resolvable configurations
 ** consumable configurations
 
 === Buckets of dependencies
 
-[%step]
+
 * A named list of dependencies
 * `canBeConsumed=false` +
   `canBeResolved=false`
 
 === Resolvable configurations
 
-[%step]
+
 * Represents a _consumer_
 * For a specific _usage_ (compiling, runtime, ...)
 * Extends from one or more bucket(s)
@@ -74,7 +74,7 @@ image::configurations/complete.png[width=100%, heighth=100%]
 
 === Consumable configurations
 
-[%step]
+
 * Represents a variant of a _producer_
 * Attaches _artifacts_
 * Extends from one or more bucket
@@ -85,7 +85,7 @@ image::configurations/complete.png[width=100%, heighth=100%]
 
 Gradle needs a way to perform the matching between consumers and producers
 
-[%step]
+
 * Attributes and attribute matching are the answer
 * Variants are the unit, identified by their attributes
 

@@ -147,3 +147,10 @@ dependencies {
 }
 ----
 
+=== Dependency constraints
+
+* Participate in the graph
+* They **do not** override preferences
+** They introduce additional constraints on versions
+** Conflict resolution discussed in 2d part of webinar
+

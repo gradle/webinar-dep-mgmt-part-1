@@ -44,13 +44,14 @@ image::configurations/classpath.png[width=100%, heighth=100%]
 * To _run against_ a module, you need:
 ** transitive `api`, `implementation` and `runtimeOnly` dependencies
 
-=== Exported configurations
+=== Elements configurations
 
 image::configurations/complete.png[width=100%, heighth=100%]
 
 === Configurations
 
 * 3 kinds of configurations
+[%step]
 ** "buckets" of dependencies
 ** resolvable configurations
 ** consumable configurations
@@ -64,23 +65,71 @@ image::configurations/complete.png[width=100%, heighth=100%]
 
 === Resolvable configurations
 
+[%step]
 * Represents a _consumer_
 * For a specific _usage_ (compiling, runtime, ...)
-* Extends from one or more bucket
-* `canBeConsumed=false`
-* `canBeResolved=true`
+* Extends from one or more bucket(s)
+* `canBeConsumed=false` +
+  `canBeResolved=true`
 
 === Consumable configurations
 
+[%step]
 * Represents a variant of a _producer_
 * Attaches _artifacts_
 * Extends from one or more bucket
-* `canBeConsumed=true`
-* `canBeResolved=false`
+* `canBeConsumed=true` +
+  `canBeResolved=false`
+
+=== Matching consumers with producers
+
+[%step]
+* Gradle needs a way to perform the matching between consumers and producers
+* Attributes and attribute matching are the answer
+
+=== Compilation against project(1)
+
+image::consumer/compile1.png[width=100%, heighth=100%]
+
+=== Compilation against project(2)
+
+image::consumer/compile2.png[width=100%, heighth=100%]
+
+=== Compilation against project(3)
+
+image::consumer/compile3.png[width=100%, heighth=100%]
+
+=== Compilation against project API (1)
+
+image::consumer/compileapi1.png[width=100%, heighth=100%]
+
+=== Compilation against project API (2)
+
+image::consumer/compileapi2.png[width=100%, heighth=100%]
+
+=== Compilation against project API (3)
+
+image::consumer/compileapi3.png[width=100%, heighth=100%]
+
+=== Runtime against project (1)
+
+image::consumer/runtime1.png[width=100%, heighth=100%]
+
+=== Runtime against project (2)
+
+image::consumer/runtime2.png[width=100%, heighth=100%]
+
+=== Runtime against project (3)
+
+image::consumer/runtime3.png[width=100%, heighth=100%]
+
+=== Against external dependency
+
+image::consumer/external.png[width=100%, heighth=100%]
 
 === Repositories
 
+[%step]
 * Out of the box support for Maven, Ivy and file repositories
 * Order of repositories _is important_
 * Avoid _mavenLocal()_ at all costs
-

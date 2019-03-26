@@ -48,10 +48,6 @@ image::rich-versions-1.png[height=562]
 
 image::rich-versions-2.png[height=459]
 
-=== How to choose?
-
-* Look at https://docs.gradle.org/current/userguide/declaring_dependencies.html#sub:declaring_dependency_rich_version[Full reference]
-
 === Special versions
 
 * Snapshots

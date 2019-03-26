@@ -1,3 +1,42 @@
 [background-color="#01303a"]
 == Core concepts
 
+=== API vs implementation
+
+* To _build_ a library, you need:
+** API+implementation dependencies
+* To _compile_ against a library, you need:
+** API dependencies
+* To _run_, you need:
+** API+implementation+runtime only dependencies
+
+=== Configurations
+
+* 3 kinds of configurations
+** "buckets" of dependencies
+** resolvable configurations
+** consumable configurations
+
+=== Buckets of dependencies
+
+* A list of dependencies
+* `canBeConsumed=false`
+* `canBeResolved=false`
+
+=== Resolvable configurations
+
+* Represents a _consumer_
+* For a specific _usage_ (compiling, runtime, ...)
+* Extends from one or more bucket
+* `canBeConsumed=false`
+* `canBeResolved=true`
+
+=== Consumable configurations
+
+* Represents a variant of a _producer_
+* Attaches _artifacts_
+* Extends from one or more bucket
+* `canBeConsumed=true`
+* `canBeResolved=false`
+
+

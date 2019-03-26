@@ -83,8 +83,9 @@ image::configurations/complete.png[width=100%, heighth=100%]
 
 === Matching consumers with producers
 
+Gradle needs a way to perform the matching between consumers and producers
+
 [%step]
-* Gradle needs a way to perform the matching between consumers and producers
 * Attributes and attribute matching are the answer
 * Variants are the unit, identified by their attributes
 
@@ -123,6 +124,10 @@ image::consumer/runtime2.png[width=100%, heighth=100%]
 === Runtime against project (3)
 
 image::consumer/runtime3.png[width=100%, heighth=100%]
+
+=== Runtime against project (4)
+
+image::consumer/runtime4.png[width=100%, heighth=100%]
 
 === Against external dependency
 

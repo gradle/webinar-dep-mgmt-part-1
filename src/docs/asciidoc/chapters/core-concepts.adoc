@@ -89,43 +89,43 @@ Gradle needs a way to perform the matching between consumers and producers
 * Attributes and attribute matching are the answer
 * Variants are the unit, identified by their attributes
 
-=== Compilation against project(1)
+=== Compilation against project
 
 image::consumer/compile1.png[width=100%, heighth=100%]
 
-=== Compilation against project(2)
+=== Compilation against project
 
 image::consumer/compile2.png[width=100%, heighth=100%]
 
-=== Compilation against project(3)
+=== Compilation against project
 
 image::consumer/compile3.png[width=100%, heighth=100%]
 
-=== Compilation against project API (1)
+=== Compilation against project API
 
 image::consumer/compileapi1.png[width=100%, heighth=100%]
 
-=== Compilation against project API (2)
+=== Compilation against project API
 
 image::consumer/compileapi2.png[width=100%, heighth=100%]
 
-=== Compilation against project API (3)
+=== Compilation against project API
 
 image::consumer/compileapi3.png[width=100%, heighth=100%]
 
-=== Runtime against project (1)
+=== Runtime against project
 
 image::consumer/runtime1.png[width=100%, heighth=100%]
 
-=== Runtime against project (2)
+=== Runtime against project
 
 image::consumer/runtime2.png[width=100%, heighth=100%]
 
-=== Runtime against project (3)
+=== Runtime against project
 
 image::consumer/runtime3.png[width=100%, heighth=100%]
 
-=== Runtime against project (4)
+=== Runtime against project
 
 image::consumer/runtime4.png[width=100%, heighth=100%]
 

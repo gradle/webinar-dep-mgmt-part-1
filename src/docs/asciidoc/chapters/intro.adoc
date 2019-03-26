@@ -29,7 +29,7 @@
 ** hard to version
 ** safe
 
-=== Source vs published (2)
+=== Source vs published
 
 * Binaries
 ** Stable

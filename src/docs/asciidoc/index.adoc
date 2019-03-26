@@ -67,4 +67,6 @@ include::chapters/core-concepts.adoc[]
 
 include::chapters/controlling-dependency-versions.adoc[]
 
+include::chapters/structuring.adoc[]
+
 include::chapters/wrapup.adoc[]

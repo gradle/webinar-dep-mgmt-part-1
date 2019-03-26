@@ -65,3 +65,8 @@ dependencies {
 }
 ----
 
+=== Publication
+
+* When published, platforms are similar to Maven BOMs
+* Actually _published as BOMs_ for Maven consumers
+* and published "as is" for Gradle consumers

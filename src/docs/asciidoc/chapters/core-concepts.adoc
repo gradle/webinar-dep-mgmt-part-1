@@ -83,11 +83,20 @@ image::configurations/complete.png[width=100%, heighth=100%]
 
 === Matching consumers with producers
 
-Gradle needs a way to perform the matching between consumers and producers
+Gradle needs a way to perform the matching between consumers and producers.
 
+Attributes and variants are the answer.
 
-* Attributes and attribute matching are the answer
-* Variants are the unit, identified by their attributes
+=== More definitions
+
+* *Attribute*
+** Named
+** Typed
+** Can have compatibility and disambiguation rules
+* *Variant*
+** A consumable form of a module
+** Declare artifacts and / or dependencies
+** Identified by its attributes and their values
 
 === Compilation against project
 
@@ -133,11 +142,33 @@ image::consumer/runtime4.png[width=100%, heighth=100%]
 
 image::consumer/external.png[width=100%, heighth=100%]
 
+=== Gradle attributes
+
+* `org.gradle.usage`: indicates the _usage_ of a variant
+** Example: `java-api` or `java-runtime`
+* `org.gradle.category`: indicates the _category_ of a component
+** Example: `library` or `platform`
+* `org.gradle.dependency.bundling`: indicates how _dependencies_ are handled
+** Example: `regular` or `embedded`
+
+=== Gradle JVM attributes
+
+* `org.gradle.jvm.version`: indicates the minimal JVM version compatibility
+** Example: `6`, `9` or `12`
+
+=== Usage of attributes
+
+* Can be declared on configurations
+** Defines an _expected_ value on resolvable
+** Defines an _exposed_ value on consumable
+* Can be declared on dependencies
+** Overrides the configuration value (if set)
+* Can be declared when retrieving artifact
+
 === Semantics and dependencies
 
-Gradle has a strong model of dependencies:
+Gradle has a strong modelling of dependencies:
 
 * Semantic difference between compilation and runtime
 * Semantic difference between building a library and building _against_ a library
 * Ability for a module to produce more than one variant
-** More on this in the followup webinars

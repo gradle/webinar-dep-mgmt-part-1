@@ -31,21 +31,7 @@ include::chapters/intro.adoc[]
 [background-color="#01303a"]
 == Demo
 
-=== Repositories
-
-* Order of repositories _is important_
-* Avoid _mavenLocal()_ at all costs
-** Not strictly a repository, but a cache for Maven
-* Metadata and artifacts downloaded concurrently
-
-=== How Gradle searches for binaries
-
-* Gradle _knows_ where an artifact comes from
-* Get the SHA1 of the artifact (GET or HEAD)
-* Looks in its dependency cache if something at the same GAV has the same hash
-* If so, uses it
-
-Consequence: even if you get a file from _Maven Central_, then you change the repository to _JCenter_, if the artifacts are the same, downloaded only once.
+include::chapters/repositories.adoc[]
 
 include::chapters/core-concepts.adoc[]
 

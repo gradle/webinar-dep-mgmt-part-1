@@ -18,6 +18,7 @@
 * Dependency alignment
 * Capabilities
 * Resolution rules
+* ...
 
 To be confirmed: June 6th
 

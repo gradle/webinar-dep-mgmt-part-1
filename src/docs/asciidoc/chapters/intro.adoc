@@ -25,9 +25,8 @@
 * Sources
 ** (mostly) reliable
 ** (often) slow
-** never touched
+** hard to temper with
 ** hard to version
-** safe
 
 === Source vs published
 
@@ -61,4 +60,5 @@ managing all dependencies of a project turns into a dependency chase.
 ** `lib` or custom repositories
 ** Ivy metadata
 ** Maven metadata
+** Gradle Module Metadata (https://blog.gradle.org/gradle-metadata-1.0[since 5.3)]
 ** and more ...

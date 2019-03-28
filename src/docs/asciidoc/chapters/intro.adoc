@@ -48,7 +48,7 @@ managing all dependencies of a project turns into a dependency chase.
 ** Published to repositories, with metadata in addition of the binary
 ** Automated the transitive aspect of dependency management
 
-=== Maven != Maven Central
+=== Metadata: Maven != Maven Central
 
 * Maven: a build tool
 * Maven *POM*: a metadata format
@@ -60,5 +60,5 @@ managing all dependencies of a project turns into a dependency chase.
 ** `lib` or custom repositories
 ** Ivy metadata
 ** Maven metadata
-** Gradle Module Metadata (https://blog.gradle.org/gradle-metadata-1.0[since 5.3)]
+** Gradle Module Metadata (https://blog.gradle.org/gradle-metadata-1.0[since 5.3])
 ** and more ...

@@ -19,5 +19,7 @@
 * Capabilities
 * Resolution rules
 
+To be confirmed: June 6th
+
 [background-color="#01303a"]
 == Questions?

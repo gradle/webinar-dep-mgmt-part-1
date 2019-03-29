@@ -4,5 +4,5 @@ plugins {
 
 presentation {
     revealjsVersion.set("3.7.0")
-    githubUserName.set("melix")
+    githubUserName.set("gradle")
 }
